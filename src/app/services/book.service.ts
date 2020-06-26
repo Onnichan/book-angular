@@ -236,6 +236,16 @@ export class BookService{
   getBooks(){
     return this.books;
   }
+
+  SearchBook(title:string){
+    let bookCollection:Book;
+    this.books.forEach(book=>{
+      if(book.name.indexOf(title)>=0){
+        bookCollection = book;
+      }
+    });
+    return bookCollection;
+  }
 }
 
 export interface Book{

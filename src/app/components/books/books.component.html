@@ -1,10 +1,11 @@
 <h1>LIBROS RECOMENDADOS</h1>
 <span>Después de unos cuantos días en casa, ¡las librerías vuelven a abrir sus puertas!. Échale un vistazo a esta selección de libros recomendados para leer en estos momentos y ¡pregunta a tu librero favorito por tu próxima lectura!.</span>
 <div class="container mt-3">
-  <div class="books" *ngFor="let book of books">
+  <div class="books" *ngFor="let book of books,let i = index">
     <img src={{book.img}} class="book-img" >
     <div class="book-name">
-      <a>{{book.name}}</a>
+      <a [routerLink]="['/book',book.name]">{{book.name}}</a>
+      <!-- <a (click)="showBooks(i)">book name</a> -->
     </div>
   </div>
 </div>

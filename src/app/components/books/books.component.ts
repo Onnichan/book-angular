@@ -18,4 +18,8 @@ export class BooksComponent implements OnInit {
     console.log(this.books);
   }
 
+  showBooks(idex:number){
+    console.log(idex);
+  }
+
 }
